@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyeongGa</title>
+    <script src="https://kit.fontawesome.com/96b5911d82.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/section.css" />
+</head>
+
+<body>
+    <header id="header">
+        <nav id="header-nav">
+            <a href="/" class="menu-logo">
+                <img src="img/logo.svg" alt="logo" />
+                <span>대출직거래 NO.1 플랫폼</span>
+                <h1>대출명가</h1>
+            </a>
+            <div class="menu-text">
+                <h2>고객센터</h2>
+                <p><i class="fa-solid fa-phone"></i>&nbsp;010-5515-2006</p>
+                <p>평일 : 09:00 - 18:00</p>
+                <p>점심시간 : 12:00 - 13:00</p>
+                <p>※ 주말 및 공휴일 휴무</p>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section" id="section-1">
+            <div class="overlay"></div>
+            <div class="section-contents section-1-contents">
+                <!-- 섹션-1 컨텐츠 왼쪽(텍스트) -->
+                <div class="section-1-text">
+                    <div>
+                        <span>대출직거래 NO.1 플랫폼</span>
+                        <h2>대출명가</h2>
+                    </div>
+                    <p>- 회원가입 NO, 수수료 NO</p>
+                    <p>- 지역별 / 상품별 업체 찾기</p>
+                    <p>- 실시간 대출 문의</p>
+                    <p>- 정식 등록 업체 ONLY</p>
+                    <p>
+                        <a href="https://www.대출명가.com" target="_blank">www.대출명가.com</a>
+                        <span><i class="fa-solid fa-circle-arrow-right"></i>&nbsp;바로가기</span>
+                    </p>
+                </div>
+                <!-- 섹션-1 컨텐츠 오른쪽(form) -->
+                <div class="section-1-form">
+                    <p>묻지도 따지지도 않는 대출</p>
+                    <h2>비대면 상담받기</h2>
+                    <p>☞ 신청만으로는 어떠한 신용 조회 기록도 남지 않습니다.</p>
+                    <form class="gform"
+                        action="https://script.google.com/macros/s/AKfycby7O9cp1nlcG7ABIEYIn0vAIm1Fzaz-CcY3ETp_2I5k4ZnPUVBuLezR986PcXIwGw9Z/exec"
+                        method="POST">
+                        <!-- Honeypot 필드 봇(스팸) 입력 방지 
+                        tabindex="-1" : 탭 순서 미포함
+                        autocomplete="off" : 자동완성 값 미제공 
+                        -->
+                        <input type="text" name="honeypot" style="display:none;" tabindex="-1" autocomplete="off">
+                        <div>
+                            <input type="text" name="name" placeholder="이름" aria-label="이름 입력" required />
+                        </div>
+                        <div>
+                            <input type="text" name="num" placeholder="연락처" aria-label="연락처 입력" required />
+                        </div>
+                        <div>
+                            <textarea name="message" rows="8" aria-label="내용 입력" required placeholder="내용
+(ex.대출명가 보고 대출상담 문의드립니다.
+또는 필요 금액과 내용을 적어주세요.)"></textarea>
+                        </div>
+                        <!-- 개인정보 수집 및 이용 동의 index.js 랜더링 -->
+                        <div class="terms"></div>
+                        <!-- 개인정보 수집 및 이용 동의 -->
+                        <div class="check-box">
+                            <input type="checkbox" id="checkbox" name="checkbox" required />
+                            <label for="checkbox">개인정보 수집 및 이용 동의</label>
+                        </div>
+                        <!-- 제출 버튼 -->
+                        <div class="btn-box">
+                            <button type="submit" class="btn-send">제출</button>
+                            <p class="submit-message" aria-live="polite"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
+    <script src="js/form-submission-handler.js"></script>
+</body>
+
+</html>

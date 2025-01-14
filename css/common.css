@@ -1,0 +1,29 @@
+@import url(reset.css);
+
+/* Noto Sans Font */
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url("../font/NotoSans-Regular.ttf") format("truetype");
+}
+/* 변수 */
+:root {
+    --color-green : #10E698;
+    --color-white : #F6F6F6;
+    --color-blue : #3F3D56C0;
+    --pc-margin-width : 40px;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 공통 padding, width, 중앙정렬(margin) */
+#header-nav, .section-contents {
+    padding: var(--pc-margin-width);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* 섹션 공통 */
+.section {
+    min-height: 100vh;
+}

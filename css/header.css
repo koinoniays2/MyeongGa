@@ -1,0 +1,42 @@
+@import url(common.css);
+
+/* header 전체 -------------------------------------------------- */
+#header {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+#header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-logo, .menu-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* header 왼쪽 메뉴(로고) -------------------------------------------------- */
+.menu-logo {
+    cursor: pointer;
+}
+.menu-logo > img {
+    width: 120px;
+}
+.menu-logo > h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* header 오른쪽 메뉴 (텍스트) -------------------------------------------------- */
+.menu-text {
+    text-align: right;
+}
+.menu-text > h2, .menu-text > p:nth-of-type(4) { /* 고객센터, ※ 주말 및 공휴일 휴무 */
+    font-weight: bold;
+}
+.menu-text > p:first-of-type { /* 010-5515-2006 */
+    color: var(--color-green);
+    font-size: 20px;
+    font-weight: bold;
+}
