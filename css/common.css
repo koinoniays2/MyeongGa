@@ -73,7 +73,7 @@ body {
 .fixed span {
     display: inline-block;
     white-space: nowrap;
-    animation: fixedAni 10s linear infinite; /* 애니메이션: 10초 동안 linear로 반복 */
+    animation: fixedAni 8s linear infinite; /* 애니메이션: 10초 동안 linear로 반복 */
 }
 @keyframes fixedAni {
     from {
