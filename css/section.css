@@ -8,6 +8,34 @@
     background-repeat: no-repeat;
     position: relative;
     color: var(--color-white);
+    transition: var(--img-transition);
+}
+/* 이미지 크기 변경 미디어쿼리 */
+/* @media (max-width: 900px) {
+    #section-1 {
+        background-position: right 80px;
+        transition: var(--img-transition);
+    }
+} */
+@media (max-width: 900px) {
+    #section-1 {
+        background-size: auto 50%;
+        background-position: right center;
+        transition: var(--img-transition);
+    }
+}
+@media (max-width: 560px) {
+    #section-1 {
+        background-size: auto 40%;
+        background-position: right 120px;
+        transition: var(--img-transition);
+    }
+}
+@media (max-width: 400px) {
+    #section-1 {
+        background-size: auto 30%;
+        transition: var(--img-transition);
+    }
 }
 .overlay { /* 배경 컬러 */
     position: absolute;
@@ -39,6 +67,7 @@
 /* 섹션-1 컨텐츠 왼쪽(텍스트) -------------------------------------------------- */
 .section-1-text {
     font-size: 30px;
+    transition: var(--font-transition);
     font-weight: bold;
     display: flex;
     flex-direction: column;
@@ -47,6 +76,7 @@
 }
 .section-1-text h2 { /* 대출명가 */
     font-size: 80px;
+    transition: var(--font-transition);
     font-weight: bold;
     color: var(--color-green);
 }
@@ -57,6 +87,26 @@
     flex-direction: column;
     cursor: pointer;
 }
+@media (max-width: 640px) {
+    .section-1-text {
+        font-size: var(--tablet-font-small);
+        transition: var(--font-transition);
+    }
+    .section-1-text h2 {
+        font-size: var(--tablet-font-big);
+        transition: var(--font-transition);
+    }
+}
+@media (max-width: 400px) {
+    .section-1-text {
+        font-size: var(--mobile-font-small);
+        transition: var(--font-transition);
+    }
+    .section-1-text h2 {
+        font-size: var(--mobile-font-big);
+        transition: var(--font-transition);
+    }
+}
 
 /* 섹션-1 컨텐츠 오른쪽(form) -------------------------------------------------- */
 .section-1-form {
@@ -64,16 +114,33 @@
     background-color: #3F3D56E0;
 }
 .section-1-form > p:nth-of-type(1) { /* 묻지도 따지지도 않는 대출 */
-    font-size: 30px;
+    font-size: var(--pc-font-small);
+    transition: var(--font-transition);
 }
 .section-1-form > h2 { /* 비대면 상담받기 */
     font-size: 60px;
+    transition: var(--font-transition);
     font-weight: bold;
     color: var(--color-green);
     padding: 8px 0;
 }
 .section-1-form > p:nth-of-type(2) { /* ☞ 신청만으로는 어떠한 신용 조회 기록도 남지 않습니다. */
     color: red;
+    word-break: keep-all; /* 단어가 끊기지 않도록 설정 */
+}
+
+@media (max-width: 640px) {
+    .section-1-form {
+        padding: var(--pc-gutter);
+    }
+    .section-1-form > p:nth-of-type(1) { /* 묻지도 따지지도 않는 대출 */
+        font-size: var(--mobile-font-small);
+        transition: var(--font-transition);
+    }
+    .section-1-form > h2 { /* 비대면 상담받기 */
+        font-size: var(--mobile-font-big);
+        transition: var(--font-transition);
+    }
 }
 /* form */
 .gform {

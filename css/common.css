@@ -11,6 +11,20 @@
     --color-white : #F6F6F6;
     --color-blue : #3F3D56C0;
     --pc-margin-width : 40px;
+    --tablet-margin-width : 24px;
+    --mobile-margin-width : 20px;
+    --pc-gutter : 32px;
+    --tablet-mobile-gutter : 16px;
+    --pc-font-big : 80px;
+    --pc-font-small : 30px;
+    --tablet-font-big : 60px;
+    --tablet-font-small : 24px;
+    --mobile-font-big : 32px;
+    --mobile-font-small : 16px;
+    --font-transition : font-size 0.3s ease-in-out;
+    --padding-transition : padding 0.3s ease-in-out;
+    --img-transition : background 0.3s ease-in-out;
+    --width-transition : width 0.3s ease-in-out;
 }
 
 body {
@@ -23,6 +37,19 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+@media (max-width: 768px) {
+    #header-nav, .section-contents {
+        padding: var(--pc-margin-width) var(--tablet-margin-width);
+        max-width: 1200px;
+    }
+}
+@media (max-width: 360px) {
+    #header-nav, .section-contents {
+        padding: var(--pc-margin-width) var(--mobile-margin-width);
+        max-width: 1200px;
+    }
+}
+
 /* 섹션 공통 */
 .section {
     min-height: 100vh;

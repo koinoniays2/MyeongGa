@@ -19,18 +19,33 @@
 /* header 왼쪽 메뉴(로고) -------------------------------------------------- */
 .menu-logo {
     cursor: pointer;
+    padding-right: 20px;
+    word-break: keep-all;
+
 }
 .menu-logo > img {
     width: 120px;
+    transition: var(--width-transition);
 }
 .menu-logo > h1 {
     font-size: 30px;
+    transition: var(--font-transition);
     font-weight: bold;
 }
-
+@media (max-width: 640px) {
+    .menu-logo > img {
+        width: 100px;
+        transition: var(--width-transition);
+    }
+    .menu-logo > h1 {
+        font-size: var(--tablet-font-small);
+        transition: var(--font-transition);
+    }
+}
 /* header 오른쪽 메뉴 (텍스트) -------------------------------------------------- */
 .menu-text {
     text-align: right;
+    transition: var(--font-transition);
 }
 .menu-text > h2, .menu-text > p:nth-of-type(4) { /* 고객센터, ※ 주말 및 공휴일 휴무 */
     font-weight: bold;
@@ -38,5 +53,16 @@
 .menu-text > p:first-of-type { /* 010-5515-2006 */
     color: var(--color-green);
     font-size: 20px;
+    transition: var(--font-transition);
     font-weight: bold;
+}
+@media (max-width: 640px) {
+    .menu-text {
+        font-size: 14px;
+        transition: var(--font-transition);
+    }
+    .menu-text > p:first-of-type { /* 010-5515-2006 */
+        font-size: var(--mobile-font-small);
+        transition: var(--font-transition);
+    }
 }
