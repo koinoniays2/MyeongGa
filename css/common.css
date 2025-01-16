@@ -54,3 +54,32 @@ body {
 .section {
     min-height: 100vh;
 }
+
+/* 하단 fixed */
+.fixed {
+    position: fixed;
+    padding: 16px;
+    bottom: 16px;
+    left: 0;
+    width: 100%;
+    background-color: #40AECB;
+    text-align: center;
+    z-index: 99;
+    font-size: var(--tablet-font-small);
+    font-weight: bold;
+    overflow: hidden; /* 텍스트가 넘어가면 숨김 */
+    white-space: nowrap; /* 텍스트가 한 줄로 유지되도록 설정 */
+}
+.fixed span {
+    display: inline-block;
+    white-space: nowrap;
+    animation: fixedAni 10s linear infinite; /* 애니메이션: 10초 동안 linear로 반복 */
+}
+@keyframes fixedAni {
+    from {
+        transform: translateX(100%); /* 텍스트가 오른쪽에서 시작 */
+    }
+    to {
+        transform: translateX(-100%); /* 텍스트가 왼쪽으로 끝까지 이동 */
+    }
+}
