@@ -73,11 +73,11 @@ body {
 .fixed span {
     display: inline-block;
     white-space: nowrap;
-    animation: fixedAni 8s linear infinite; /* 애니메이션: 10초 동안 linear로 반복 */
+    animation: fixedAni 8s linear infinite; /* 애니메이션: linear로 반복 */
 }
 @keyframes fixedAni {
     from {
-        transform: translateX(100%); /* 텍스트가 오른쪽에서 시작 */
+        transform: translateX(50%); /* 텍스트가 오른쪽에서 시작 */
     }
     to {
         transform: translateX(-100%); /* 텍스트가 왼쪽으로 끝까지 이동 */
