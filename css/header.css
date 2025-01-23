@@ -2,7 +2,7 @@
 
 /* header 전체 -------------------------------------------------- */
 #header {
-    background-color: var(--color-blue);
+    background-color: var(--bg-color-blue);
     color: var(--color-white);
 }
 #header-nav {
@@ -19,7 +19,7 @@
 /* header 왼쪽 메뉴(로고) -------------------------------------------------- */
 .menu-logo {
     cursor: pointer;
-    padding-right: 20px;
+    padding-right: var(--tablet-mobile-gutter);
     word-break: keep-all;
 
 }
@@ -28,20 +28,11 @@
     transition: var(--width-transition);
 }
 .menu-logo > h1 {
-    font-size: 30px;
+    font-size: var(--pc-font-small);
     transition: var(--font-transition);
     font-weight: bold;
 }
-@media (max-width: 640px) {
-    .menu-logo > img {
-        width: 100px;
-        transition: var(--width-transition);
-    }
-    .menu-logo > h1 {
-        font-size: var(--tablet-font-small);
-        transition: var(--font-transition);
-    }
-}
+
 /* header 오른쪽 메뉴 (텍스트) -------------------------------------------------- */
 .menu-text {
     text-align: right;
@@ -52,17 +43,33 @@
 }
 .menu-text > p:first-of-type { /* 010-5515-2006 */
     color: var(--color-green);
-    font-size: 20px;
-    transition: var(--font-transition);
+    font-size: 16px;
     font-weight: bold;
+    transition: var(--font-transition);
 }
-@media (max-width: 640px) {
+
+/* 미디어 쿼리 -------------------------------------------------- */
+/* 768px ~ 1200px */
+@media (max-width: 1200px) {
+    /* 왼쪽 메뉴(로고) */
+    .menu-logo > img {
+        width: 80px;
+        transition: var(--width-transition);
+    }
+    .menu-logo > h1 {
+        font-size: var(--tablet-font-small);
+        transition: var(--font-transition);
+    }
+    /* 오른쪽 메뉴(텍스트) */
     .menu-text {
         font-size: 14px;
         transition: var(--font-transition);
     }
-    .menu-text > p:first-of-type { /* 010-5515-2006 */
-        font-size: var(--mobile-font-small);
+}
+/* 360px ~ 768px */
+@media (max-width: 768px) {
+    .menu-text {
+        font-size: 14px;
         transition: var(--font-transition);
     }
 }

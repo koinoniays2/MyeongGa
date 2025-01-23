@@ -42,5 +42,6 @@ table {
 }
 a, input, textarea, button {
     all: unset;
-    appearance: checkbox;
+    appearance: checkbox; /* 기본 스타일 유지 */
+	-webkit-appearance: checkbox; /* 구형 웹킷 브라우저용 */
 }
