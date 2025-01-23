@@ -10,7 +10,9 @@
     /* color */
     --color-green : #10E698;
     --color-white : #F6F6F6;
-    --bg-color-blue : #3F3D56C0;
+    --color-blue : #40AECB;
+    --color-navy : #3F3D56;
+    --bg-color-navy : #3F3D56C0;
     /* margin */
     --pc-margin-width : 40px;
     --tablet-margin-width : 24px;
@@ -53,12 +55,13 @@ body {
     }
 }
 .section-contents {
-    padding-bottom: 80px;
+    padding-bottom: 80px; /* fixed 공간 */
 }
 
 /* 섹션 공통 */
 .section {
     min-height: 100vh;
+    background-color: var(--color-white);
 }
 
 /* 하단 fixed */

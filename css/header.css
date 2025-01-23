@@ -2,7 +2,7 @@
 
 /* header 전체 -------------------------------------------------- */
 #header {
-    background-color: var(--bg-color-blue);
+    background-color: var(--bg-color-navy);
     color: var(--color-white);
 }
 #header-nav {
