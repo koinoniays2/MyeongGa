@@ -3,7 +3,7 @@
 /* 섹션-1 전체 -------------------------------------------------- */
 #section-1 { /* 배경 이미지 */
     background: url("../img/bg-img.svg");
-    background-size: auto 70%; /* 너비, 높이 */
+    background-size: auto 60%; /* 너비, 높이 */
     background-position: 40px calc(100% - 80px); /* x축, y축 */
     background-repeat: no-repeat;
     position: relative;
@@ -186,23 +186,16 @@
 }
 
 /* 이미지 크기 변경 미디어쿼리 -------------------------------------------------- */
-@media (max-width: 950px) {
+@media (max-width: 1200px) {
     #section-1 {
         background-size: auto 50%;
-        background-position: right center;
+        background-position: right 30%;
         transition: var(--img-transition);
     }
 }
-@media (max-width: 560px) {
+@media (max-width: 768px) {
     #section-1 {
-        background-size: auto 40%;
-        background-position: right 50%;
-        transition: var(--img-transition);
-    }
-}
-@media (max-width: 400px) {
-    #section-1 {
-        background-size: auto 30%;
+        background-size: auto 25%;
         transition: var(--img-transition);
     }
 }
